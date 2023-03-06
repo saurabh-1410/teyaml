@@ -11,4 +11,10 @@ file { '/root/result.txt':
 ensure => file,
 content => $deferred_content
 }
+
+file { '/tmp/file1':
+  ensure  => file,
+  content => 'Hello',
+  noop    => false,
+}
 }
